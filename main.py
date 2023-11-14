@@ -376,7 +376,7 @@
 
 # shutil.copyfile('test.txt','copy.txt') #src.dst
 #! move a file
-import os
+# import os
 
 # source = "copy.txt"
 # destination = "C:\\Users\\Danyi\\OneDrive\\Documents\\copy.txt"
@@ -402,8 +402,160 @@ import os
 # except FileNotFoundError:
 #     print("not found")
 #! delete a file
-import os
+# import os
+# import shutil
 
-path = "copy.txt"
+# path = "copy.txt"
 
-os.remove(path)
+# try:
+#    os.remove(path)
+#    os.rmdir(path)
+    # shutil.rmtree(path)
+# except FileNotFoundError:
+#     print("the file was not found")
+# except OSError:
+#     print("you canot delete that file")
+# except PermissionError:
+#     print("you dont have permission")
+# else:
+#     print("path was deleted.") 
+#! modules
+# import messages
+# import messages as msg
+# from messages import hello, bye
+# from messages import *
+
+# messages.hello()
+# messages.bye()
+
+# msg.hello()
+# msg.bye()
+
+# hello()
+# bye()
+
+# help("modules")
+#! rock paper scissors
+# import random
+
+# while True:
+#     choices = ["rock","paper","scissors"]
+
+#     computer = random.choice(choices)
+#     player = None
+
+#     while player not in choices:
+#         player = input("rock, paper, or scissors?: ").lower()
+#     if player == computer:
+#         print("computer: " + computer)
+#         print("player: " + player)
+#         print("tie")
+#     elif player == "rock":
+#         if computer == "paper":
+#             print("computer: " + computer)
+#             print("player: " + player)
+#             print("you lose!")
+#         elif computer =="scissors":
+#             print("computer: " + computer)
+#             print("player: " + player)
+#             print("you win!")
+#     elif player == "paper":
+#         if computer == "rock":
+#             print("computer: " + computer)
+#             print("player: " + player)
+#             print("you win!")
+#         elif computer =="scissors":
+#             print("computer: " + computer)
+#             print("player: " + player)
+#             print("you loose!")
+#     elif player == "scissors":
+#         if computer == "paper":
+#             print("computer: " + computer)
+#             print("player: " + player)
+#             print("you win!")
+#         elif computer =="rock":
+#             print("computer: " + computer)
+#             print("player: " + player)
+#             print("you loose!")
+#     play_again = input("do you want to play again yes/no?: ").lower()
+
+#     if play_again != "yes":
+#         break
+# print("bye")
+#! quiz game
+# def new_game():
+    
+#     guesses = []
+#     correct_guesses = 0
+#     question_num = 1
+
+#     for key in questions:
+#         print("-------------")
+#         print(key)
+#         for i in options [question_num-1]:
+#             print(i)
+#         guess = input("Enter (A, B, C, or D): ")
+#         guess = guess.upper()
+#         guesses.append(guess)
+
+#         correct_guesses += check_answer(questions.get(key),guess)
+#         question_num += 1
+
+#     display_score(correct_guesses, guesses)
+
+# # ----------------------------
+# def check_answer(answer, guess):
+    
+#     if answer == guess:
+#         print("CORRECT!")
+#         return 1
+#     else:
+#         print("WRONG!")
+#         return 0
+# # ----------------------------
+# def display_score(correct_guesses, guesses):
+#     print("-----------------------")
+#     print("RESULTS")
+#     print("-----------------------")
+#     print("answers: ", end="")
+#     for i in questions:
+#         print(questions.get(i), end=" ")
+#     print()
+
+#     print("Guesses: ", end="")
+#     for i in guesses:
+#         print(i, end=" ")
+#     print()
+
+#     score = int((correct_guesses/len(questions))*100)
+#     print("your score is: "+str(score)+"%")
+# # ----------------------------
+# def play_again():
+    
+#     responce = input("dow you want to play again (yes/no) ")
+#     responce = responce.upper()
+
+#     if responce == "YES":
+#         return True
+#     else:
+#         return False
+
+# # ----------------------------
+
+# questions = {
+#     "who created Python?: ": "A",
+#     "What year was Python created?: ": "B",
+#     "Python is tributed to which comedy group?: ": "C",
+#     "Is the Earth round?: ": "A"
+# }
+
+# options = [["A. Guido van Rossum", "B. Elon Musk", "C. Bill Gates", "D. Mark Zuckerburg"],
+#           ["A. 1989", "B. 1991", "C. 2000", "D. 2016"],
+#           ["A. Lonely Island", "B. Smosh", "C. Monty Python", "D. SNL"],
+#           ["A. True","B. False", "C. sometimes", "D. What's Earth?"]]
+
+# new_game()
+
+# while play_again():
+#     new_game()
+# print("bye")
